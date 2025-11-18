@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hack_Nexus 2024</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@400;700;900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+              display: ['Orbitron', 'sans-serif'],
+            },
+            colors: {
+              cyber: {
+                black: '#050507',
+                dark: '#0a0a0f',
+                primary: '#00f0ff', // Cyan neon
+                secondary: '#7000df', // Purple neon
+                accent: '#ff003c', // Red/Pink neon
+                dim: 'rgba(0, 240, 255, 0.1)',
+              }
+            },
+            animation: {
+              'glitch': 'glitch 1s linear infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              glitch: {
+                '2%, 64%': { transform: 'translate(2px,0) skew(0deg)' },
+                '4%, 60%': { transform: 'translate(-2px,0) skew(0deg)' },
+                '62%': { transform: 'translate(0,0) skew(5deg)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #050507;
+        color: #e2e8f0;
+        overflow-x: hidden;
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0a0a0f;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #7000df;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #00f0ff;
+      }
+
+      .glass-panel {
+        background: rgba(10, 10, 15, 0.7);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .neon-text {
+        text-shadow: 0 0 10px rgba(0, 240, 255, 0.7), 0 0 20px rgba(0, 240, 255, 0.5);
+      }
+      
+      .neon-purple {
+        text-shadow: 0 0 10px rgba(112, 0, 223, 0.7);
+      }
+
+      .grid-bg {
+        background-image: 
+          linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+        background-size: 50px 50px;
+        mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+      }
+
+      .clip-path-slant {
+        clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+      }
+      
+      .clip-path-hex {
+        clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
